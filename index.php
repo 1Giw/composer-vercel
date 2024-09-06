@@ -1,5 +1,5 @@
 <?php
-
+require_once __DIR__ . '/vendor/autoload.php';
 use Dotenv\Dotenv;
 
 try {
@@ -16,8 +16,21 @@ try {
     }
     
     // Gunakan variabel ini di tempat lain dalam aplikasi
-    echo "Gie: " . $hello;
+    $message = "Gie: " . $hello;
 
 } catch (Exception $e) {
-    echo "Cannot load env: " . $e->getMessage();
+    $message = "Cannot load env: " . $e->getMessage();
 }
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Environment Variable Example</title>
+</head>
+<body>
+    <h1><?php echo $message; ?></h1>
+</body>
+</html>

@@ -8,10 +8,6 @@
     {
       "source": "/(.*)",
       "destination": "/api/index.php"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/index.php"
     }
   ]
 }
